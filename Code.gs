@@ -2,8 +2,9 @@
 const SHEET_NAME = 'RSVP';
 function reply_(ok, message, requestId) {
   const payload = JSON.stringify({type:'wedding-rsvp-result', ok:ok, message:message, requestId:requestId});
-  const html = '<!doctype html><html><body><script>parent.postMessage(' + payload + ', "*");' + '</' + 'script></body></html>';
-  return HtmlService.createHtmlOutput(html);
+  const html = '<!doctype html><html><body><script>var result=' + payload + ';var target=window;for(var i=0;i<10;i++){if(target===target.parent)break;target=target.parent;target.postMessage(result,"*");}' + '</' + 'script></body></html>';
+  return HtmlService.createHtmlOutput(html)
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 function doPost(e) {
   const p = e && e.parameter ? e.parameter : {};
