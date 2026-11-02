@@ -7,7 +7,7 @@
 <meta name="description" content="Szeretettel várunk az esküvőnkre 2027. szeptember 18-án! Információk és visszajelzés.">
 <style>
 :root{--blue:#294b77;--light:#eaf1fa;--ink:#26384d;--muted:#66768a;--white:#fff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f9fbfd;color:var(--ink);font:16px/1.65 Georgia,serif}a{color:var(--blue)}.nav{display:flex;justify-content:space-between;align-items:center;padding:16px max(5%,calc((100vw - 1100px)/2));background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 18px #294b7710}.brand{font-size:19px;letter-spacing:2px;color:var(--blue);text-decoration:none}.links{display:flex;gap:20px;font:13px Arial,sans-serif}.links a{text-decoration:none}.hero{min-height:620px;display:flex;align-items:center;justify-content:center;text-align:center;padding:85px 22px;background:radial-gradient(circle at 14% 20%,#b9d0eb88 0 9%,transparent 24%),radial-gradient(circle at 90% 75%,#c7d9ef88 0 10%,transparent 26%),linear-gradient(150deg,#fff,#edf4fb)}.eyebrow{font:12px Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;color:#6886aa}.hero h1{font-size:clamp(40px,7vw,79px);line-height:1.18;font-weight:400;color:var(--blue);margin:25px 0}.date{font-size:21px;letter-spacing:2px}.flower{font-size:58px;line-height:1;margin:0;color:#769aca}.button{display:inline-block;background:var(--blue);color:#fff;border:0;padding:13px 28px;text-decoration:none;border-radius:3px;cursor:pointer;font:14px Arial,sans-serif;letter-spacing:1px}.button:hover{background:#173758}.hero .button{margin-top:30px}section{padding:75px 20px}.container{max-width:1000px;margin:auto}.center{text-align:center}h2{font-size:clamp(30px,4vw,43px);font-weight:400;color:var(--blue);margin:0 0 20px}h3{font-size:23px;font-weight:400;color:var(--blue)}.subtitle{max-width:650px;margin:0 auto 35px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.card{background:white;border:1px solid #e0e9f3;padding:30px;border-radius:5px;box-shadow:0 8px 30px #1f47720a}.pale{background:var(--light)}.timeline{max-width:650px;margin:auto}.timeline p{border-left:2px solid #9bb7d7;padding:3px 0 3px 20px}.small{font:13px/1.5 Arial,sans-serif;color:var(--muted)}form{max-width:700px;margin:25px auto 0;background:white;border:1px solid #dce6f1;padding:32px;text-align:left}label{display:block;font:14px Arial,sans-serif;color:#344a64;margin:18px 0 7px}input,select,textarea{width:100%;padding:12px;border:1px solid #bfcfe0;border-radius:3px;font:15px Arial,sans-serif;background:#fff}textarea{min-height:95px;resize:vertical}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:18px}.status{margin-top:16px;font:14px Arial,sans-serif}.footer{padding:40px 20px;background:#24456c;color:#fff;text-align:center}.footer p{margin:5px}.note{border-left:3px solid #8ba8c8;padding-left:14px;color:var(--muted)}@media(max-width:680px){.nav{display:block;text-align:center}.links{justify-content:center;flex-wrap:wrap;gap:10px;margin-top:10px}.grid,.formrow{grid-template-columns:1fr}.hero{min-height:510px}section{padding:55px 18px}form{padding:20px}}
-.guest-list{margin-top:22px;padding:20px;background:#f4f8fd;border:1px solid #dbe6f3;border-radius:5px}.guest-list h3{margin:0 0 5px;font-size:21px}.guest-list p{margin:0 0 12px}.guest-list label{margin-top:12px}.guest-list input{background:white}[hidden]{display:none!important}</style>
+.guest-list{margin-top:22px;padding:20px;background:#f4f8fd;border:1px solid #dbe6f3;border-radius:5px}.guest-list h3{margin:0 0 5px;font-size:21px}.guest-list p{margin:0 0 12px}.guest-list label{margin-top:12px}.guest-list input{background:white}.guest-person{padding:4px 0 18px;border-bottom:1px solid #dbe6f3}.guest-person:last-child{border-bottom:0;padding-bottom:0}[hidden]{display:none!important}</style>
 </head>
 <body>
 <nav class="nav"><a class="brand" href="#kezdolap">A & M</a><div class="links"><a href="#reszletek">Részletek</a><a href="#program">Program</a><a href="#szallas">Szállás</a><a href="#visszajelzes">Visszajelzés</a></div></nav>
@@ -23,8 +23,6 @@
 <div id="attending-fields" hidden>
 <div class="formrow"><div><label for="adults">Felnőttek száma (veled együtt) *</label><input id="adults" name="adults" type="number" min="1" max="30" value="1" disabled required></div><div><label for="children">Gyerekek száma *</label><input id="children" name="children" type="number" min="0" max="30" value="0" disabled required></div></div>
 <div id="guest-list" class="guest-list" aria-live="polite"></div>
-<label for="ages">Gyerekek életkora (ha releváns)</label><input id="ages" name="ages" maxlength="150" placeholder="Pl. 4 és 8 év" disabled>
-<label for="diet">Ételallergia / speciális étrend</label><textarea id="diet" name="diet" maxlength="1000" placeholder="Kérjük, írjátok le, kire vonatkozik." disabled></textarea>
 <label for="accommodation">Szükségetek lenne szállásra?</label><select id="accommodation" name="accommodation" disabled><option value="nem tudjuk">Még nem tudjuk</option><option value="igen">Igen</option><option value="nem">Nem</option></select>
 <label for="travel">Hogyan érkeztek? *</label><select id="travel" name="travel" required disabled><option value="">Válasszatok…</option><option value="auto">Autóval érkezünk</option><option value="transzfer">Transzferre lenne szükségünk</option><option value="egyeb">Más módon érkezünk / még nem tudjuk</option></select>
 <div id="car-fields" hidden><label for="can_drive">Tudnátok segíteni más vendégek fuvarozásában?</label><select id="can_drive" name="can_drive" disabled><option value="">Válasszatok…</option><option value="igen">Igen</option><option value="nem">Nem</option><option value="nem tudjuk">Még nem tudjuk</option></select><div id="seats-fields" hidden><label for="extra_seats">Hány további vendéget tudnátok elvinni? *</label><input id="extra_seats" name="extra_seats" type="number" min="1" max="30" placeholder="Pl. 2" disabled></div></div>
@@ -56,18 +54,35 @@ function refreshGuests() {
   const countAdults = Math.max(1, Math.min(30, Number(adults.value) || 1));
   const countChildren = Math.max(0, Math.min(30, Number(children.value) || 0));
   const count = countAdults + countChildren;
-  const previous = [...guestList.querySelectorAll('input')].map(x => x.value);
+  const previous = new Map([...guestList.querySelectorAll('.guest-person')].map(person => [
+    person.dataset.key,
+    Object.fromEntries([...person.querySelectorAll('input, textarea')].map(field => [field.dataset.field, field.value]))
+  ]));
   guestList.replaceChildren();
-  const title = document.createElement('h3'); title.textContent = 'Résztvevők teljes neve'; guestList.append(title);
-  const note = document.createElement('p'); note.className='small'; note.textContent = `Összesen ${count} név szükséges, a sajátodat is beleértve.`; guestList.append(note);
+  const title = document.createElement('h3'); title.textContent = 'Résztvevők adatai'; guestList.append(title);
+  const note = document.createElement('p'); note.className='small'; note.textContent = `Összesen ${count} név szükséges, a sajátodat is beleértve. Az ételallergiát és a speciális étrendet mindenkinél külön jelezzétek.`; guestList.append(note);
   for(let i=0;i<count;i++) {
-    const label=document.createElement('label');
-    const id='guest_'+i;
-    label.htmlFor=id;
-    label.textContent=`${i+1}. ${i<countAdults ? 'felnőtt' : 'gyermek'} teljes neve *`;
-    const input=document.createElement('input');
-    input.id=id; input.name='guest_'+i; input.type='text'; input.maxLength=150; input.required=true; input.placeholder='Vezetéknév Keresztnév'; input.value=previous[i]||'';
-    guestList.append(label,input);
+    const isChild=i>=countAdults;
+    const key=isChild ? 'child_'+(i-countAdults) : 'adult_'+i;
+    const saved=previous.get(key)||{};
+    const person=document.createElement('div');
+    person.className='guest-person'; person.dataset.key=key;
+    function addField(field, text, type, placeholder, required=false) {
+      const id='guest_'+i+(field==='name'?'':'_'+field);
+      const label=document.createElement('label');
+      label.htmlFor=id; label.textContent=text;
+      const input=document.createElement(type==='textarea'?'textarea':'input');
+      input.id=id; input.name=id; input.dataset.field=field;
+      if(type!=='textarea') input.type=type;
+      input.required=required; input.placeholder=placeholder; input.value=saved[field]||'';
+      if(type==='number'){input.min='0';input.max='17';input.step='1';}
+      else input.maxLength=field==='name'?150:1000;
+      person.append(label,input);
+    }
+    addField('name',`${i+1}. ${isChild ? 'gyermek' : 'felnőtt'} teljes neve *`,'text','Vezetéknév Keresztnév',true);
+    if(isChild) addField('age','A gyermek életkora (év)','number','Pl. 4');
+    addField('diet','Ételallergia / speciális étrend ennél a személynél','textarea','Pl. tejallergia, gluténmentes étrend; ha nincs, hagyd üresen.');
+    guestList.append(person);
   }
 }
 function refreshTransport() {
@@ -100,17 +115,60 @@ form.addEventListener('submit', async e => {
     const count=Number(adults.value)+Number(children.value);
     data.guest_names=JSON.stringify(Array.from({length:count},(_,i)=>document.getElementById('guest_'+i).value.trim()));
     if(JSON.parse(data.guest_names).some(name=>!name)) {status.textContent='Kérjük, minden résztvevő teljes nevét töltsétek ki.';return;}
+    const people=[...guestList.querySelectorAll('.guest-person')].map(person => {
+      const value=field=>person.querySelector('[data-field="'+field+'"]')?.value.trim()||'';
+      return {name:value('name'),age:value('age'),diet:value('diet'),isChild:person.dataset.key.startsWith('child_')};
+    });
+    data.guests=JSON.stringify(people);
+    data.ages=people.filter(person=>person.isChild && person.age).map(person=>person.name+': '+person.age+' év').join(' | ');
+    data.diet=people.filter(person=>person.diet).map(person=>person.name+': '+person.diet).join(' | ');
   } else {
-    data.adults='0';data.children='0';data.guest_names='[]';data.ages='';data.diet='';data.accommodation='';data.travel='';data.can_drive='';data.extra_seats='';
+    data.adults='0';data.children='0';data.guest_names='[]';data.guests='[]';data.ages='';data.diet='';data.accommodation='';data.travel='';data.can_drive='';data.extra_seats='';
   }
-  const btn=document.getElementById('send');btn.disabled=true;
-  status.textContent='Küldés folyamatban…';
-  try {
-    await fetch(RSVP_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(data)});
-    status.textContent='A beküldési kérést elküldtük. A Google Táblázatba mentés visszaigazolása technikai okból nem ellenőrizhető; kérjük, szükség esetén egyeztessetek velünk.';
-    form.reset();refreshAttendance();
-  } catch(err) {status.textContent='Nem sikerült elküldeni. Kérjük, próbáljátok újra.';}
-  finally {btn.disabled=false;}
+  const btn=document.getElementById('send');
+  btn.disabled=true;
+  status.textContent='Küldés és mentés folyamatban…';
+  const requestId=(window.crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Date.now())+'-'+Math.random();
+  data.request_id=requestId;
+  const iframe=document.createElement('iframe');
+  iframe.name='rsvp_response_'+requestId.replace(/[^a-zA-Z0-9_-]/g,'');
+  iframe.style.display='none';
+  iframe.title='RSVP válasz';
+  document.body.appendChild(iframe);
+  const postForm=document.createElement('form');
+  postForm.method='POST';
+  postForm.action=RSVP_ENDPOINT;
+  postForm.target=iframe.name;
+  postForm.style.display='none';
+  for (const [key,value] of Object.entries(data)) {
+    const input=document.createElement('input');
+    input.type='hidden'; input.name=key; input.value=String(value);
+    postForm.appendChild(input);
+  }
+  document.body.appendChild(postForm);
+  let finished=false;
+  let timer;
+  function finish(ok,message) {
+    if(finished)return;
+    finished=true;
+    clearTimeout(timer);
+    window.removeEventListener('message',onMessage);
+    status.textContent=message;
+    status.style.color=ok?'#216443':'#a32e2e';
+    if(ok){form.reset();refreshAttendance();}
+    btn.disabled=false;
+    postForm.remove();iframe.remove();
+  }
+  function onMessage(event) {
+    if(event.source!==iframe.contentWindow)return;
+    const result=event.data;
+    if(!result || result.type!=='wedding-rsvp-result' || result.requestId!==requestId)return;
+    finish(result.ok===true, result.ok ? 'Köszönjük a visszajelzést! A jelentkezéseteket sikeresen rögzítettük.' : (result.message||'Nem sikerült menteni a jelentkezést.'));
+  }
+  window.addEventListener('message',onMessage);
+  timer=setTimeout(()=>finish(false,'Nem érkezett mentési visszaigazolás. Kérjük, egyeztessetek velünk, mielőtt újra bekülditek.'),30000);
+  try {postForm.submit();}
+  catch(err){finish(false,'Nem sikerült elküldeni. Kérjük, próbáljátok újra.');}
 });
 </script>
 </body></html>
